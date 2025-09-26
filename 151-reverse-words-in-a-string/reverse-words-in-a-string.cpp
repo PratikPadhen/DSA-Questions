@@ -1,7 +1,7 @@
 class Solution {
 public:
-    string reverseWords(string s) {
-        string ans1;
+    string reverseWords(string s) {  // if u want to reverse string normally like this->
+        string ans1;                 // abcd->dcba then reverse(s.begin(),s.end()); can be use.
         vector<string> ans;
         stringstream ss(s);
         string word;
