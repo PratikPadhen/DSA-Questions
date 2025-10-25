@@ -9,7 +9,7 @@ public:
         int result=0;
         for(int i=0;i<s.length();i++){
             int v=value[s[i]];
-            if(i+1 < s.length() && v < value[s[i+1]]){
+             if( v < value[s[i+1]]){
                 result-=v;
             }
             else{
