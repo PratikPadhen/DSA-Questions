@@ -35,15 +35,17 @@ public:
         }
 
         // CONVERSION: String to integer with overflow protection
-        int val=0;
-        {
-        stringstream ss(ans);      // ⚠️ BUG: Should be ss(ans) not ss(s)
-        ss >> val;               // Extract integer from stringstream
-        }
+         int val=0;
+         {
+         stringstream ss(ans);      // ⚠️ BUG: Should be ss(ans) not ss(s)
+         ss >> val;               // Extract integer from stringstream
+         }
+        
+
         
         // CLAMPING: Ensure result fits in 32-bit signed integer range
-        // if(val < INT_MIN) return INT_MIN;  // Clamp to minimum if underflow
-        // if(val > INT_MAX) return INT_MAX;  // Clamp to maximum if overflow
+        //  if(val < INT_MIN) return INT_MIN;  // Clamp to minimum if underflow
+        //  if(val > INT_MAX) return INT_MAX;  // Clamp to maximum if overflow
         return static_cast<int>(val);      // Safe cast to int and return
     }
 };
